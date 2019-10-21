@@ -2,12 +2,20 @@
 
 namespace PalTracker
 {
+    [Route("env")]
     public class EnvController : Controller
     {
-        // GET
-        public IActionResult Index()
+        private readonly CloudFoundryInfo _cloudFoundryInfo;
+
+        public EnvController(CloudFoundryInfo cloudFoundryInfo)
         {
-            return View();
+            _cloudFoundryInfo = cloudFoundryInfo;
+        }
+
+        [HttpGet]
+        public CloudFoundryInfo Get()
+        {
+            return _cloudFoundryInfo;
         }
     }
 }

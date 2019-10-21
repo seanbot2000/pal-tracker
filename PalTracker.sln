@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FF9FEE1B-4DF9-40F1-87AB-009D5ACB2B18}"
+ProjectSection(SolutionItems) = preProject
+	src\manifest.yml = src\manifest.yml
+EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalTracker", "src\PalTracker\PalTracker.csproj", "{A978856A-59AE-4E58-82B2-DC3A16884A43}"
 EndProject
