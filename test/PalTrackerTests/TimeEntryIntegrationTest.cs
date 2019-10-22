@@ -41,7 +41,8 @@ namespace PalTrackerTests
         {
             var timeEntry = new TimeEntry(222, 333,  new DateTime(2008, 01, 08), 24);
 
-            var response = _testClient.PostAsync("/time-entries", SerializePayload(timeEntry)).Result;
+            var content = SerializePayload(timeEntry);
+            var response = _testClient.PostAsync("/time-entries", content).Result;
             var responseBody = JObject.Parse(response.Content.ReadAsStringAsync().Result);
 
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);

@@ -40,6 +40,8 @@ namespace PalTracker
 
                 return new CloudFoundryInfo(port, memoryLimit, cfInstanceIndex, cfInstanceAddr);
             });
+
+            services.AddSingleton<ITimeEntryRepository, InMemoryTimeEntryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
